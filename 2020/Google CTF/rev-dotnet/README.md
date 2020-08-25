@@ -78,10 +78,11 @@ Summary of what this function does:
 - Calls the `SMORBOLL` function to calculate a checksum from the list and validate it
 - Calls the `HEROISK` function to validate the list against a set of conditions
 
-We recover the list (after xored) by putting all the conditions in `SMORBOLL` and `HEROISK` into z3 and let it find the solution: (solver.py)
+We recover the list (after xored) by putting all the conditions in `SMORBOLL` and `HEROISK` into z3 and let it find the solution: [solver.py](solver.py)
+
 `48, 25, 23, 19, 15, 26, 13, 57, 36, 9, 52, 27, 4, 18, 49, 6, 41, 8, 43, 62, 45, 55, 37, 32, 1, 0, 7, 28, 47, 2`
 
-After that we reverse the xor and the base64 conversion: (Solver.cs). Sadly all that we get is: `YouMissedSomethingImportantCpp`. Inputting this "fake flag" into the application and we get "Flag checksum invalid". Something is really missing here.
+After that we reverse the xor and the base64 conversion: [Solver.cs](Solver.cs). Sadly all that we get is: `YouMissedSomethingImportantCpp`. Inputting this "fake flag" into the application and we get "Flag checksum invalid". Something is really missing here.
 
 Looking closer, the application is shipped together with `0Harmony.dll`. [A quick research](https://harmony.pardeike.net/) tells us this is a library that does all the magic - patch the functions in the application so that they do something else. This patching is done inside the `VARDAGEN` function:
 
@@ -149,8 +150,12 @@ private static string FYRKANTIG(string BISSING)
 
 Playing around with various inputs, we know that the native functions are not very complicated. A character in the input results in another character in the output (at a different position - some shuffling is involved).
 
-Now we patch the `submit_button_Click` function, so that when we click the submit button, the program prints out the flag. Cool huh ;)
-(Patching code: (Patch.cs) Result: [EKTORPFlagValidator_Patched_Final.exe](EKTORPFlagValidator_Patched_Final.exe))
+With this knowledge, it is enough to recover the flag. The algorithm works as follow:
+- For each position in the input, find its corresponding position in the output by testing 2 different values
+- Bruteforce the characters in each position to find the matching output (recovered previously with z3)
+
+This can be done manually but it is a bit tedious. We take it to another level by injecting the code inside the `submit_button_Click` function, so that when we click the submit button, the program prints out the flag. Cool huh ;)
+(Patching code: [Patch.cs](Patch.cs) Result: [EKTORPFlagValidator_Patched_Final.exe](EKTORPFlagValidator_Patched_Final.exe))
 
 ```c#
 // OSTRON.KVOT
