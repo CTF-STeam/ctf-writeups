@@ -7,7 +7,7 @@ Download: Decrypt_Vulnerable_Data_1.zip => [challenge.py](challenge.py) [enc_dat
 ## Problem
 We are given the following encryption code:
 
-```
+```python
 from Crypto.Util.number import getRandomInteger
 from secret import flag
 
