@@ -2,7 +2,7 @@
 
 Can you break this contents scrambling system?
 
-Download: Decrypt_Vulnerable_Data_1.zip [challenge.py](challenge.py) [enc_data.txt](enc_data.txt)
+Download: Decrypt_Vulnerable_Data_1.zip => [challenge.py](challenge.py) [enc_data.txt](enc_data.txt)
 
 ## Problem
 We are given the following encryption code:
@@ -71,9 +71,9 @@ And ciphertext:
 
 ## Solution
 We know that the plaintext begins with "The flag is: " (104 bits), so we can do a known plaintext attack (KPA) by bruteforcing the 16-bit salt:
-- From the 16-bit salt, we generate the output of lfsr17
-- Xoring the first 25 bits of the output with the first 25 bits of the plaintext and ciphertext gives us the first 25-bit output of lfsr25
-- The first 25-bit output of lfsr25 is also the bits of the register after 25 rounds of clocking. So we can use this to generate the rest of the output and continue the decryption. If the result matches the rest of the known plaintext then the 16-bit salt is correct and we use this to decrypt the rest of the ciphertext.
+- From the 16-bit salt, we generate the output of `lfsr17`
+- Xoring the first 25 bits of the output with the first 25 bits of the plaintext and ciphertext gives us the first 25-bit output of `lfsr25`
+- The first 25-bit output of `lfsr25` is also the bits of the register after 25 rounds of clocking. So we can use this to generate the rest of the output and continue the decryption. If the result matches the rest of the known plaintext then the 16-bit salt is correct and we use this to decrypt the rest of the ciphertext.
 (It might be possible to bruteforce less bits but this is already enough to solve the challenge)
 
 Solver code: [solve.py](solve.py)
