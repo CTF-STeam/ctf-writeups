@@ -4,12 +4,12 @@
 
 [Attachment](https://storage.googleapis.com/gctf-2020-attachments-project/a8d65cb3b53a09c557b4e9a1744e08f73d0571dba9d79241fed3519cdd38f14c51472b108353f033e3223b5ec48bb8f0296b2abc3142ea0690592b9904816d3b)
 
-# Tools needed
-- dnSpy [https://github.com/0xd4d/dnSpy](https://github.com/0xd4d/dnSpy)
-- z3 [https://github.com/Z3Prover/z3](https://github.com/Z3Prover/z3)
-- IDA or any other disassembler is not needed, this is a pure .Net solution
+## Tools needed
+- dnSpy - [https://github.com/0xd4d/dnSpy](https://github.com/0xd4d/dnSpy)
+- z3 - [https://github.com/Z3Prover/z3](https://github.com/Z3Prover/z3)
+- IDA or any other disassembler is not needed, this is a pure .Net (and z3) solution
 
-# Solution
+## Solution
 
 We are given a .Net application. The goal is to find a flag that passes the validation.
 
