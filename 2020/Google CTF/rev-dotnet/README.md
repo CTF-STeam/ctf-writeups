@@ -73,7 +73,7 @@ private static string FYRKANTIG(string BISSING)
 
 Summary of what this function does:
 - Checks the flag length (30 characters)
-- Calls the `GRUNDTAL_NORRVIKEN` function to create a list of unsigned integers from the flag (which is basically a translation of 0-9A-za-z{} to 0-63)
+- Calls the `GRUNDTAL_NORRVIKEN` function to create a list of unsigned integers from the flag (which is basically a translation of `0-9A-za-z{}` to `0-63`)
 - Calls the `DAGSTORP` function to xor the list with another list of unsigned integers
 - Calls the `SMORBOLL` function to calculate a checksum from the list and validate it
 - Calls the `HEROISK` function to validate the list against a set of conditions
@@ -110,6 +110,12 @@ internal static void VARDAGEN()
 - `RIKTIG_OGLA` is patched with `GRONKULLA`, which calls another ugly native function (before the original `RIKTIG_OGLA` function that was doing nothing)
 - `GRUNDTAL_NORRVIKEN` is patched with `SPARSAM`, which essentially returns false - to skip execution of the original function - base64 conversion
 - `DAGSTORP` is patched with `FLARDFULL`, which essentially returns false - to skip execution of the original function - xoring with the uint list
+
+Summary of flag validation after Harmony patching:
+- Flag is converted to another string (ASCII values from 0 to 63 using some native functions
+- Create a list of unsigned integers from the flag (no more base64 conversion)
+- No more xoring
+- Checksum and conditional validations are still the same in `SMORBOLL` and `HEROISK` functions
 
 The native functions are ugly, so we try another way around. First we patch the `FYRKANTIG` function with dnSpy so it prints out the string after going through the native functions (result: [EKTORPFlagValidator_Patched1.exe](EKTORPFlagValidator_Patched1.exe))
 
