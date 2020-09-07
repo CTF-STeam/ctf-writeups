@@ -20,7 +20,7 @@ We need to bypass 2 validations:
 
 The hash is a combination of `md5`, `sha1`, `sha384`, `blake2b`. We know that `md5` has been considered weak and there are many ways to create a hash collision, so this is the way to go.
 
-[This page](https://github.com/corkami/collisions) gives a very good summary of hash collisions and exploitations. [Chosen-prefix collisions](Chosen-prefix collisions) with hashclash seems to be the right approach to solve this challenge, however it takes a lot of time (72 hours.core). Fortunately there's a better approach, using [identical prefix with unicoll](https://github.com/corkami/collisions#unicoll-md5).
+[This page](https://github.com/corkami/collisions) gives a very good summary of hash collisions and exploitations. [Chosen-prefix collisions](https://github.com/corkami/collisions#chosen-prefix-collisions) with hashclash seems to be the right approach to solve this challenge, however it takes a lot of time (72 hours.core). Fortunately there's a better approach, using [identical prefix with unicoll](https://github.com/corkami/collisions#unicoll-md5).
 
 To understand how this attack work, refer to the link given. Tldr version: from a prefix, unicoll generates 2 files, one with the given prefix, one with that prefix with a small difference at 9th character (perfect for us to bypass the gatekeeper check).
 
@@ -28,7 +28,7 @@ Command to run unicoll:
 
 ```
 $ printf 'sp3akfr1end4nd3nt3r\x00' > prefix.txt
-$ poc_no.sh prefix.txt
+$ ./poc_no.sh prefix.txt
 ```
 
 The script runs for a little over 1 hour on my old Core 2 Duo machine. It generates 2 files with the same md5: [collision1.bin](collision1.bin) and [collision2.bin](collision2.bin)
