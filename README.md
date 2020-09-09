@@ -9,3 +9,5 @@
   - [csictf](./2020/csictf)
   - [UIUCTF](./2020/UIUCTF)
   - [Chujowy CTF](./2020/Chujowy%20CTF)
+  - [rgbCTF](./2020/rgbCTF)
+
