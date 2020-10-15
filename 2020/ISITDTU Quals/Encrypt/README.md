@@ -4,6 +4,6 @@ You can find an excellent writeup by team More Smoked Leet Chicken here: [http:/
 
 The same code can be used to solve this chall.
 
-[solve.sage](solve.sage) [task3_sol.py](task3_sol.py)
+[solve.sage](solve.sage) [task3_sol.py](task3_sol_final.py)
 
 Flag: `ISITDTU{NTRU_3ncrypti0n_alg0rithm_3asy!!!!!!!!}`
