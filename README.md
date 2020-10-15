@@ -1,6 +1,10 @@
 # STeam's CTF Writeups
 
 - [2020 writeups](./2020)
+  - [ISITDTU CTF 2020 Quals](./2020/ISITDTU%20Quals/)
+  - [DamCTF](./2020/DamCTF/)
+  - [DarkCTF](./2020/DarkCTF/)
+  - [TokyoWesterns CTF](./2020/TokyoWesterns%20CTF/)
   - [ALLES! CTF](./2020/ALLES!%20CTF/)
   - [FwordCTF](./2020/FwordCTF/)
   - [GACTF](./2020/GACTF/)
@@ -10,4 +14,3 @@
   - [UIUCTF](./2020/UIUCTF)
   - [Chujowy CTF](./2020/Chujowy%20CTF)
   - [rgbCTF](./2020/rgbCTF)
-
