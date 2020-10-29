@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+    mutual_friend:
+        build: .
+        restart: always
+        ports:
+          - 27268:1337
+        security_opt:
+            - seccomp:unconfined
