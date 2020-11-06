@@ -2,7 +2,7 @@ There are 4 parity bits, with 15 possibilities for each position, so it is possi
 
 [A little modification of the code for error 1](https://github.com/CTF-STeam/ctf-writeups/blob/master/2020/nactf/Error2/error2_sol.py) is enough to solve this problem (the code is unoptimized but good enough to find the flag in about 10 seconds):
 
-```
+```python
 from functools import reduce
 from itertools import product
 from binascii import unhexlify
