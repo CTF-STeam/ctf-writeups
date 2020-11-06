@@ -2,7 +2,7 @@ The second part of the video in the hint tells you the elegance of Hamming code,
 
 For each group of 15 bits, xor the positions of all 1 bits and you'll get the position of the flipped bit:
 
-```
+```python
 from functools import reduce
 from binascii import unhexlify
 
