@@ -17,6 +17,7 @@ Although many people think this crypto challenge is terrible, I myself think it'
 Observation of the ciphertext:
 - Consists of 8 different emojis, in which 💜 and 🐴 appear at low frequency
 - Emojis come in groups of 3, separated by whitespaces. An exceptional case is 🦄🦄
+
 Now we can assume that substitution cipher is used. Each group of 3 emojis stands for 1 character. 🦄🦄 is probably separator.
 
 Let's try replacing each group of emojis with a different character, 🦄🦄 with underscore:
@@ -32,14 +33,14 @@ abcdebfgh_ifjke_lcfimnco_na_jpl_qlaj_lcfimnco_rljpims
 sun{?u???_?????_?n????n?_?s_???_??s?_?n????n?_??????}
 ```
 
-Best candidate for `?s` is `is`:
+Best candidate for `?s` is of course `is`:
 
 ```
 abcdebfgh_ifjke_lcfimnco_na_jpl_qlaj_lcfimnco_rljpims
 sun{?u???_?????_?n???in?_is_???_??s?_?n???in?_??????}
 ```
 
-Now we use [onelook](https://www.onelook.com/?w=?n???in?&ssbp=1&scwo=1&sswo=1) to search for words with `?n???in?` pattern. `anything`, `enjoying` and `encoding` seem to be the most suitable options, among which `encoding` gives the best decryption:
+Now we use [Onelook](https://www.onelook.com/?w=?n???in?&ssbp=1&scwo=1&sswo=1) to search for words with `?n???in?` pattern. `anything`, `enjoying` and `encoding` seem to be the most suitable options, among which `encoding` gives the best decryption:
 
 ```
 abcdebfgh_ifjke_lcfimnco_na_jpl_qlaj_lcfimnco_rljpims
