@@ -1,5 +1,8 @@
 # H4x0r3d (264 pt)
 
+Task by Mikhail Driagunov (@aethereternity) · Par time: ~40 min
+○○○○○○○○○●●○●○○○○○●○●○○○○○○●○○○○○○○○○●○○●○○○●○○○○○●○○○○○○○●○○○○○○
+
 I've tried to learn some PHP, but some evil guy hacked me!
 
 Can you catch him by looking at my logs?
