@@ -1,4 +1,4 @@
-We are given the server code in [](isityou.py), the following part is important:
+We are given the server code in [isityou.py](isityou.py), the following part is important:
 
 ```
 FLAG = open('flag.txt','rb').read()
