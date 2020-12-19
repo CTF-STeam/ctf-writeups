@@ -105,7 +105,7 @@ Here's how it works:
 - You are expected to escape from a maze. Starting from (3, 0). Exit is at (4, 7)
 - Maze is of size 8x8
 - Available moves are: U (Up), D (Down), L (Left), R (Right)
-- Each cell in the maze is represented by 4 bytes data corresponding to the 4 sides. 1 means you move in that direction. 0 means there is a wall, you cannot move.
+- Each cell in the maze is represented by 4 bytes corresponding to the 4 sides. 1 means you can move in that direction. 0 means there is a wall, you cannot move.
 - You are given a maximum of 34 moves. The string is then used to decrypt the flag.
 
 We dumped the maze data (offset 0x404018):
