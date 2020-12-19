@@ -1,6 +1,6 @@
 We are given the server code in [isityou.py](isityou.py), the following part is important:
 
-```
+```python
 FLAG = open('flag.txt','rb').read()
 great_poem = open('my_poem.txt').read()
 
