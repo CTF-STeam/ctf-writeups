@@ -5,8 +5,8 @@ x$x%s%&LH6=4~>60E_0x$x%s%&\r%u\a~a@N
 ```
 
 We suspected this was a crypto chall. Some observation of the text:
-- The pattern `x$x%s%&`
-- Also, it matches the flag format `ISITDTU{}`
+- The pattern `x$x%s%&` appeared twice
+- Also, it matched the flag format `ISITDTU{}`
 
 So it could be assumed that some kind of substitution cipher was used. We tried replacing it and figure out the rule of substitution:
 
