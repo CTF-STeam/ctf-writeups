@@ -1,6 +1,9 @@
 # STeam's CTF Writeups
 
 - [2020 writeups](./2020)
+  - [ISITDTU CTF 2020 Finals](./2020/ISITDTU%20Finals/)
+  - [SPbCTF's Student CTF 2020 Quals](./2020/SPbCTF/)
+  - [Sunshine CTF 2020](./2020/SunshineCTF/)
   - [Newark Academy CTF 2020](./2020/nactf/)
   - [RaziCTF 2020](./2020/RaziCTF/)
   - [Syskron Security CTF 2020](./2020/Syskron/)
