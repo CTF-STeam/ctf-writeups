@@ -1,3 +1,5 @@
+# Magic Dude5 (Cryptography - 323 pts - first blood)
+
 ### Another first blood victory for STeam!
 
 [The server code](server.py) is quite simple:

@@ -1,3 +1,5 @@
+# game (Reversing - 400 pts - third blood)
+
 This challenge was solved by another member in our team, but he's too lazy to create a writeup.
 
 Here's the decrypted text if you're interested:

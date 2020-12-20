@@ -1,3 +1,5 @@
+# maze (Reversing - 421 pts - first blood)
+
 ### Cooperation of reverser and cyberartist got us first blood. Hurray!
 
 Opening the executable in IDA, we found the following [code](maze_pseudocode.c):

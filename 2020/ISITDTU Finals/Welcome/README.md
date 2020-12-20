@@ -1,3 +1,5 @@
+# Welcome (Misc - 100 pts - third blood)
+
 We were given the following "text", and the challenge was in misc section, which told us that anything could be possible.
 
 ```

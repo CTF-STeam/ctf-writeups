@@ -1,4 +1,4 @@
-# Fire Cannons (456 pts - second blood)
+# Fire Cannons (Misc - 456 pts - second blood)
 
 "Spy" is not the right word for this challenge. Our team are fighting for justice, therefore "agent" must be used.
 
@@ -17,12 +17,12 @@ However this requires some (a little) complicated calculations. Instead we solve
 - Subtract (1) to (2):
 ```
 2x - 1 = d1^2 - d2^2
-x = (d1^2 - d2^2 + 1) / 2
+=> x = (d1^2 - d2^2 + 1) / 2
 ```
 - Subtract (1) to (3):
 ```
 2y - 1 = d1^2 - d3^2
-y = (d1^2 - d3^2 + 1) / 2
+=> y = (d1^2 - d3^2 + 1) / 2
 ```
 
 Also, notice that high floating point precision is needed in order to get the correct values. We used the `gmpy2` class with the precision of 2048 bits.
