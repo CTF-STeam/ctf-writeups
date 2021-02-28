@@ -1,5 +1,9 @@
 # STeam's CTF Writeups
 
+- [2021 writeups](./2021)
+  - [Tenable CTF 2021](./2021/TenableCTF/)
+  - [SecureBug CTF](./2021/SecureBugCTF/)
+  - [TetCTF 2021](./2021/TetCTF/)
 - [2020 writeups](./2020)
   - [ISITDTU CTF 2020 Finals](./2020/ISITDTU%20Finals/)
   - [SPbCTF's Student CTF 2020 Quals](./2020/SPbCTF/)
