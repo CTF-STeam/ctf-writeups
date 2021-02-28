@@ -1,3 +1,10 @@
+# ECDSA Implementation (Crypto - 225 pts)
+
+This challenge is about ECDSA nonce-reuse weakness. See [this post](https://ropnroll.co.uk/2017/05/breaking-ecdsa/) for explanation.
+
+Solver code: [ecdsa_solve.py](ecdsa_solve.py)
+
+---
 # Is the King in Check? (Coding - 200 pts)
 
 This chall is fairly simple, it can be solved by checking for threats from enemy pieces:
