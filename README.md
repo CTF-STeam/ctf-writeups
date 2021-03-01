@@ -1,6 +1,7 @@
 # STeam's CTF Writeups
 
 - [2021 writeups](./2021)
+  - [Ugra CTF Quals 2021](./2021/UgraCTF/)
   - [Tenable CTF 2021](./2021/TenableCTF/)
   - [SecureBug CTF](./2021/SecureBugCTF/)
   - [TetCTF 2021](./2021/TetCTF/)
