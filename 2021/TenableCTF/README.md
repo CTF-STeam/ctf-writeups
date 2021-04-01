@@ -1,3 +1,38 @@
+# Protected Directory (Crypto - 50 pts)
+
+The directory is protected, we have a look at the `.htpasswd` file ([http://167.71.246.232/.htpasswd](http://167.71.246.232/.htpasswd)):
+
+```
+admin:$apr1$1U8G15kK$tr9xPqBn68moYoH4atbg20
+```
+
+Running [John](https://www.openwall.com/john/) with a wordlist takes a long time without any result. However, using default option gives us the password:
+
+```
+$ john htpasswd
+Warning: detected hash type "md5crypt", but the string is also recognized as "md5crypt-long"
+Use the "--format=md5crypt-long" option to force loading these as that type instead
+Using default input encoding: UTF-8
+Loaded 1 password hash (md5crypt, crypt(3) $1$ (and variants) [MD5 128/128 AVX 4x3])
+Will run 4 OpenMP threads
+Proceeding with single, rules:Single
+Press 'q' or Ctrl-C to abort, almost any other key for status
+Warning: Only 22 candidates buffered for the current salt, minimum 48 needed for performance.
+Warning: Only 32 candidates buffered for the current salt, minimum 48 needed for performance.
+Warning: Only 41 candidates buffered for the current salt, minimum 48 needed for performance.
+Almost done: Processing the remaining buffered candidate passwords, if any.
+Warning: Only 23 candidates buffered for the current salt, minimum 48 needed for performance.
+Proceeding with wordlist:/usr/share/john/password.lst, rules:Wordlist
+Proceeding with incremental:ASCII
+alesh16          (admin)
+1g 0:00:00:28 DONE 3/3 (2021-02-19 22:52) 0.03551g/s 36861p/s 36861c/s 36861C/s analete..alemeis
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed
+```
+
+The name of the directory is `admin`, use the username and password we recovered to unlock it and get the flag: `flag{cracked_the_password}`
+
+---
 # Classic Crypto (Crypto - 50 pts)
 
 This is Vigenere cipher. From the encrypted flag `zdat{qyyegcuvvurlqfy}`, we try to decrypt with `flag{}` as known plaintext and recover the key `anonymous`.
