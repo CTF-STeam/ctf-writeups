@@ -1,4 +1,4 @@
-# Protected Directory (Crypto - 50 pts)
+# Protected Directory (Web - 50 pts)
 
 The directory is protected, we have a look at the `.htpasswd` file ([http://167.71.246.232/.htpasswd](http://167.71.246.232/.htpasswd)):
 
