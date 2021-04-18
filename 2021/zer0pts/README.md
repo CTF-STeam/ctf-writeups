@@ -4,9 +4,10 @@ This is a good CTF with some interesting and original crypto challs, which can b
 
 Below are writeups for some of the challs we solved during this CTF.
 
+---
 # war(sa)mup (Web - 102 pts)
 
-This is Franklin-Reiter related message attack [task.py](warsamup/task.py)
+This is Franklin-Reiter related message attack - [task.py](warsamup/task.py)
 ```python
 c1 = pow(m, e, n)
 c2 = pow(m // 2, e, n)
@@ -25,7 +26,7 @@ Flag: `zer0pts{y0u_g07_47_13457_0v3r_1_p0in7}`
 ---
 # OT or NOT OT (Crypto - 116 pts)
 
-We are given the following code [server.py](ot_or_not_ot/server.py):
+We are given the following code - [server.py](ot_or_not_ot/server.py):
 ```python
 p = getStrongPrime(1024)
 
@@ -69,19 +70,19 @@ while key > 0:
 Here's how it works:
 - The goal is to recover the key bits by bits, and use it to decrypt the flag.
 - For each 2 bits of the key, we need to control the inputs (`a`, `b`, `c`, `d`) somehow to extract the bits from the outputs (`t`, `x`, `y`, `z`).
-- A check is in place (`a`, `b`, `c`, `d` must be greater than 1) to make sure it cannot be solved the easy way.
+- A check is in place (`a`, `b`, `c`, `d` must be greater than 1) to make sure it cannot be solved the easy/trivial way.
 
 Here's how we solved it:
-- Set `a` to 2
+- Set `a` to `2`
 - Set `b` to `a * (p - 1) % p`
 - Set `c` to `inverse(t, p)`
 - Set `d` to `inverse(a, p)`
 
 We recover the first bit by checking the value of `xz = x * z % p`:
-If key bit is zero: `x = u` => `xz = (pow(a, r, p) * pow(c, s, p) % p) * (pow(d, r, p) * pow(t, s, p) % p) % p = pow(a * d, r, p) * pow(c * t, r, p) % p = 1`
+- If key bit is `0`: `x = u` => `xz = (pow(a, r, p) * pow(c, s, p) % p) * (pow(d, r, p) * pow(t, s, p) % p) % p = pow(a * d, r, p) * pow(c * t, r, p) % p = 1`
 
 We recover the second bit by checking the value of `yz = y * z % p`:
-If key bit is zero: `y = v` => `yz = (pow(b, r, p) * pow(c, s, p) % p) * (pow(d, r, p) * pow(t, s, p) % p) % p = pow(b * d, r, p) * pow(c * t, r, p) % p`, which is `1` (if `r` is even) or `p - 1` (if `r` is odd)
+- If key bit is `0`: `y = v` => `yz = (pow(b, r, p) * pow(c, s, p) % p) * (pow(d, r, p) * pow(t, s, p) % p) % p = pow(b * d, r, p) * pow(c * t, r, p) % p`, which is `1` (if `r` is even) or `p - 1` (if `r` is odd)
 
 Solver code: [ot_sol.py](ot_or_not_ot/ot_sol.py)
 
@@ -101,4 +102,4 @@ Ciphertext: b'MhrolctEj18YjX+31UfU21YO2CU7cajwBf/2q7dtK+0='
 [*] Got EOF while reading in interactive
 ```
 
-Flag: `zer0pts{H41131uj4h_H41131uj4h}`
+AES decryption is not included in the code (in order to not waste time on coding mistake :P). You can use CyberChef to decrypt it. Flag: `zer0pts{H41131uj4h_H41131uj4h}`

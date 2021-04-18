@@ -1,6 +1,7 @@
 # STeam's CTF Writeups
 
 - [2021 writeups](./2021)
+  - [zer0pts CTF 2021](./2021/zer0pts/)
   - [SBVCTF 2021](./2021/SBVCTF/)
   - [Ugra CTF Quals 2021](./2021/UgraCTF/)
   - [Tenable CTF 2021](./2021/TenableCTF/)
