@@ -1,6 +1,6 @@
 # Rise and Shine (warm-up misc crypto - 354 pts)
 
-Once upon a time, in a land not too far away, and not as distant as you might think in time, as well, there was a little penguin. And, that penguin went to `/etc/secret` in Deutschland wearing his little red riding hood, there he met the bad black horned creature and his (maybe bad) friends.
+Once upon a time, in a land not too far away, and not as distant as you might think in time, as well, there was a little penguin 🐧. And, that penguin went to `/etc/secret` in Deutschland wearing his little red riding hood, there he met the bad black horned creature and his (maybe bad) friends.
 
 Bad black horned creature and his friends told the little penguin that they are actually good, M$ is the evil one.
 
@@ -14,13 +14,13 @@ Many years have passed, little penguin had grown up to become big penguin. Altho
 
 One day big penguin found a strange bottle drifting from the land of the blue hens to his island. Actually, many other penguins saw that bottle and tried to read its content, but all they found was gibberish. Here was what the bottle looked like:
 
-![Flag bottle](Rise-and-Shine/breakfast.png | width=883)
+<img src="Rise-and-Shine/breakfast.png" width="589" />
 
 To the big penguin, however, the bottle was like a message from the good old days. He easily figured out the important part, as portrayed below:
 
-![Decrypt the flag bottle](Rise-and-Shine/breakfast.png | width=883)
+<img src="Rise-and-Shine/breakfast-bacon.png" width="589" />
 
-Big penguin started reading the bottle counterclockwised, interpreting hexagrams as 0, and heptagrams as 1:
+Big penguin started reading the bottle counterclockwised, interpreting each hexagram as 0, and heptagram as 1:
 
 ```
 00010 00111 00000 01011 01110 01000 01101 01100
