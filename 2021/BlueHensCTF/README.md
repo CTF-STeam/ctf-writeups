@@ -12,7 +12,7 @@ Little penguin made a lot of friends, one of them was very talented at hiding st
 
 Many years have passed, little penguin had grown up to become big penguin. Although busy catching fish and taking care of his kids, big penguin still spent some of his free time catching the flags to relive great moments of the good old days.
 
-One day big penguin found a strange bottle drifting from the land of the blue hens to his island. Actually, many other penguins saw that bottle and tried to read its content, but all they found was gibberish. Here was what the bottle looked like:
+One day big penguin found a strange bottle drifting from the land of the Blue Hens to his island. Actually, many other penguins saw that bottle and tried to read its contents, but all they found was gibberish. Here was what the bottle looked like:
 
 <img src="Rise-and-Shine/breakfast.png" width="589" />
 
