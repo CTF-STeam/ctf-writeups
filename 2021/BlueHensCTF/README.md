@@ -2,7 +2,7 @@
 
 Once upon a time, in a land not too far away, and not as distant as you might think in time, as well, there was a little penguin 🐧. And, that penguin went to `/etc/secret` in Deutschland wearing his little red riding hood, there he met the bad black horned creature and his (maybe bad) friends.
 
-Bad black horned creature and his friends told the little penguin that they are actually good, M$ is the evil one.
+Bad black horned creature and his friends told the little penguin that they were actually good, M$ was the evil one.
 
 (Maybe) good black horned creature and his friends taught little penguin to treasure what he had, especially his smileys.
 
@@ -10,9 +10,9 @@ Good black horned creature and his friends helped little penguin realize that XO
 
 Little penguin made a lot of friends, one of them was very talented at hiding stuff inside other stuff, which people call the art of steganography. Little penguin had fun solving those steganography challs, his observation and analysis skills greatly improved. He even created a [tool which helps with steganalysis](https://github.com/quangntenemy/Steganabara).
 
-Many years have passed, little penguin had grown up to become big penguin. Although busy catching fish and taking care of his kids, big penguin still spent some of his free time catching the flags to relive great moments of the good old days.
+Many years have passed, little penguin had grown up to become big penguin. Although busy catching fish and taking care of his kids, big penguin still spent some of his free time catching the flags to relive the great moments of the good old days.
 
-One day big penguin found a strange bottle drifting from the land of the Blue Hens to his island. Actually, many other penguins saw that bottle and tried to read its contents, but all they found was gibberish. Here was what the bottle looked like:
+One day big penguin found a strange bottle drifting from the [land of the Blue Hens](https://ctftime.org/event/1298) to his island. Actually, many other penguins saw that bottle and tried to read its contents, but all they found was gibberish. Here was what the bottle looked like:
 
 <img src="Rise-and-Shine/breakfast.png" width="589" />
 
