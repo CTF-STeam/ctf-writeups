@@ -26,6 +26,6 @@ Big penguin started reading the bottle counterclockwised, interpreting each hexa
 00010 00111 00000 01011 01110 01000 01101 01100
 ```
 
-Breakfast is the most important meal of the day, and big penguin really liked bacon for breakfast. He also used the bacon to decrypt the message and recovered the hidden message:
+Breakfast is the most important meal of the day, and big penguin really liked bacon for breakfast. He also used the [bacon](https://www.dcode.fr/bacon-cipher) to decrypt the message and recovered the hidden message:
 
 `UDCTF{CHAMPION}`
