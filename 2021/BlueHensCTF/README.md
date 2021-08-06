@@ -91,7 +91,7 @@ $flag = trim(file_get_contents("../../flag1.txt"));
 $key = pad_string($flag, 0); 
 ```
 
-We use [CyberChef]() to dump ciphertext to file, then [xortool]() to find the key length of 25 and try to reveal some part of the flag.
+We use [CyberChef](https://gchq.github.io/CyberChef/) to dump ciphertext to file, then [xortool](https://github.com/hellman/xortool) to find the key length of 25 and try to reveal some part of the flag.
 ```
 $ xortool otp1.dat
 The most probable key lengths:
@@ -117,7 +117,7 @@ Found 4 plaintexts with 95%+ valid characters
 See files filename-key.csv, filename-char_used-perc_valid.csv
 ```
 
-Then use [otp_pwn]() to decrypt the text.
+Then use [otp_pwn](https://github.com/derbenoo/otp_pwn) to decrypt the text.
 
 ```
 POS   | HEX | DEC | STR |   POS   | HEX | DEC | STR |   POS   | HEX | DEC | STR |   POS   | HEX | DEC | STR |   POS   | HEX | DEC | STR |   POS   | HEX | DEC | STR |   POS   | HEX | DEC | STR |
@@ -154,7 +154,7 @@ KEY: 55 44 43 54 46 7b 77 33 6c 63 30 6d 65 5f 74 30 5f 30 75 72 5f 63 74 66 7d
 Flag: `UDCTF{w3lc0me_t0_0ur_ctf}`
 
 ---
-# OTP2 (crypto - ??? pts)
+# OTP2 (crypto - 422 pts)
 
 Challenge file: [otp2.php](OTP2/otp2.php)
 
@@ -252,9 +252,9 @@ Continue and we recover the flag: `UDCTF{m3d1um_X0r_str3ng7h_f7w}`
 Full script: [otp2_sol.py](OTP2/otp2_sol.py)
 
 ---
-# OTP3 (crypto - ??? pts)
+# OTP3 (crypto - 482 pts)
 
-Challenge file: [otp2.php](OTP2/otp2.php)
+Challenge file: [otp3.php](OTP3/otp3.php)
 
 This time the flag is padded to a random length between 250 and 550 with random chars (both leading and trailing).
 ```php
