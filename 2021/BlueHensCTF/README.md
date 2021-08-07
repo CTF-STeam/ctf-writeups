@@ -317,3 +317,38 @@ b LDBEASZ  FICEANQ
 With some trials and errors, eventually we recover the flag: `UDCTF{wh3n_th3y_s4y_1_t1m3_th3y_mean_1t}`
 
 Full script: [otp3_sol.py](OTP3/otp3_sol.py)
+
+---
+# Transforms (misc - 75 pts)
+
+Convert between hexdigest, integer, bytearray, string. Nothing special.
+
+Code: [transforms_sol.py](Transforms/transforms_sol.py)
+
+Flag: `UDCTF{r0b075_1N_d15gu153}`
+
+---
+# Guessing Game (crypto misc - 99 pts)
+
+Given a string, we need to guess which function was used (between `and`, `or` and `xor`)
+
+Here's my logic:
+```python
+def count(str):
+    return len([x for x in str if x < 0x80]), len([x for x in str if x >= 0x80])
+
+def guess(str):
+    print(str)
+    c = count(str)
+    print(c)
+    if c[0] > 76:
+        return 'and'
+    elif c[0] < 48:
+        return 'or'
+    else:
+        return 'xor'
+```
+
+Full code: [guessinggame_sol.py](guessing-game/guessinggame_sol.py)
+
+Flag: `UDCTF{c4n_y0u_gu355_7h15_f14g?}`
