@@ -1,16 +1,15 @@
-
 # Google CTF 2025 – `crypto_numerology` (Crypto, 50 pts)
 
 > *“I made a new cipher, can you help me test it? I'll give you the key, please use it to decrypt my ciphertext.”*
 
----
+Writeup by [STeam](https://ctftime.org/team/681). Follow our [Facebook](https://www.facebook.com/steam.ctf) for more interesting security-related stuff
 
+---
 ## Challenge Summary
 
 We were given a custom stream cipher, a known key, a fixed plaintext, many ciphertext pairs with known nonces and counters, and a target ciphertext (the flag) encrypted under unknown nonce/counter. The goal was to decrypt the flag.
 
 ---
-
 ## Files Provided
 
 - `crypto_numerology.py`: The cipher implementation
@@ -20,7 +19,6 @@ We were given a custom stream cipher, a known key, a fixed plaintext, many ciphe
 - `readme.md`: Brief description
 
 ---
-
 ## 1. Cipher Internals
 
 The cipher in `crypto_numerology.py` is based on [ChaCha20](https://cr.yp.to/chacha.html), but heavily modified:
