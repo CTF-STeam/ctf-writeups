@@ -1,5 +1,7 @@
 # STeam's CTF Writeups
 
+- [2025 writeups](./2025)
+  - [Google CTF](./2025/GoogleCTF/)
 - [2021 writeups](./2021)
   - [UIUCTF 2021](./2021/UIUCTF/)
   - [BlueHens CTF 2021](./2021/BlueHensCTF/)
