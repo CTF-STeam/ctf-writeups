@@ -2,9 +2,15 @@
 
 A collection of detailed writeups from [STeam CTF team](https://ctftime.org/team/681) for various Capture The Flag (CTF) competitions.
 
-Explore in-depth solutions across categories like crypto, pwn, web, and more — complete with code, reasoning, and flags when possible. Ideal for learning, reviewing, or improving your CTF skills.
+We believe in sharing knowledge. This collection features in-depth solutions across all major categories like crypto, pwn, web, and more — complete with source code and technical reasoning, and flags when possible.
 
-Follow our [Facebook](https://www.facebook.com/steam.ctf) for more interesting security-related stuff
+* **Goal:** To provide a high-quality learning resource for the security community, helping new players improve their CTF skills.
+* **Content:** Writeups, exploit scripts, and tool configurations.
+* **Updates:** We regularly post new content following major competitions.
+
+⭐ **If you find these writeups helpful, a star is always appreciated!**
+
+**Stay Updated:** For more technical insights and industry perspectives, follow our [Facebook](https://www.facebook.com/steam.ctf).
 
 - [2025 writeups](./2025)
   - [Google CTF](./2025/GoogleCTF/)
