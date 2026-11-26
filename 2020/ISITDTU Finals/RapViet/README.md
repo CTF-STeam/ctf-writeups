@@ -94,3 +94,7 @@ include("./pages/" . $_GET['page']);
 (Or better: use a strict whitelist of allowed filenames and never concatenate user input into include paths.)
 
 This is a textbook example of why “check then include” without proper termination is dangerous.
+
+## Follow us
+
+If you like this writeup, don't forget to follow us on [GitHub](https://github.com/CTF-STeam) for more CTF writeups, challenges, and solutions.
