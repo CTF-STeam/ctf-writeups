@@ -71,7 +71,17 @@ curl -s "http://TARGET/?page=../../../../flag"
 curl -s "http://TARGET/?page=../../../../home/ctf/flag"
 ```
 
-In the real remote instance the flag was readable via a short relative traversal (most likely `?page=../flag` or similar).
+### Note from the Original Event
+In the original ISITDTU CTF 2020 Finals, our team was **unable to solve** this challenge during the contest.  
+
+While the missing `exit` after the `Location` header is clearly the intended (and sufficient) bug for LFI, the fact that we (and several other strong teams) could not get the flag at the time strongly suggests that **additional tricks were involved** on the live instance. Possible factors include:
+
+- Non-standard flag location or permissions
+- Web server / PHP configuration differences (open_basedir, disable_functions, path resolution quirks)
+- Possible chaining with another misconfiguration or a specific CVE on the target environment
+- The filter or include behavior behaving differently under the exact PHP version / OS used by the organizers
+
+The source alone makes the LFI look straightforward, but the real remote setup was almost certainly more constrained or required an extra step that was not obvious from the provided files.
 
 ### Flag
 ```
